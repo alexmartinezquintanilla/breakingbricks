@@ -42,7 +42,6 @@ public class BreakingBricks  extends JFrame implements Runnable, KeyListener {
     private int iMovY;
     //Contador de puntos
     private int iScore;
-    //Imagen de fondo
 /////Se necesitan?
     private int posX;
     private int posY;
@@ -248,6 +247,7 @@ public class BreakingBricks  extends JFrame implements Runnable, KeyListener {
             lnkCharolas.add(perCharola);
         }
         //agrego keylistner
+
         addKeyListener(this);
     }
 
