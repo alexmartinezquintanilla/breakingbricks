@@ -164,6 +164,7 @@ public class BreakingBricks  extends JFrame implements Runnable, KeyListener {
                         ("Charola/charolarota.wav");
         }
         
+        
 //////////RELEVANTE AL CROWBAR
         // se crea imagen del crowbar
         URL urlImagenCrowbar = this.getClass().getResource("crowbar.png");
@@ -229,25 +230,8 @@ public class BreakingBricks  extends JFrame implements Runnable, KeyListener {
             scSonidoMoscaI.play();
         } 
 
-        //Se crea una lista para los objetos charola
-        lnkCharolas = new LinkedList();
-        //Se crean las charolas y se meten a la lista
-        iAzar = (int) (Math.random() * (11 - 8) + 8);
-        for (int iK = 1; iK <= iAzar; iK++) {
-            posX = 0;
-            posY = (int) (Math.random() * getHeight());
-            // se crea el personaje caminador
-            Personaje perCharola;
-            perCharola = new Personaje(posX, posY,
-                    Toolkit.getDefaultToolkit().getImage(urlImagenCharola));
-            perCharola.setX(0 - perCharola.getAncho());
-            perCharola.setY((int) (Math.random() * (getHeight() 
-                    - perCharola.getAlto())));
-            perCharola.setVelocidad((int) (Math.random() * (5 - 3) + 3));
-            lnkCharolas.add(perCharola);
-        }
+      
         //agrego keylistner
-
         addKeyListener(this);
     }
 
